@@ -1,0 +1,852 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="GCC for Windows 64 & 32 bits">
+      
+      
+      
+        <link rel="canonical" href="https://www.mingw-w64.org/changelog/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../downloads/">
+      
+      <link rel="icon" href="../logo.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Changelog - MinGW-w64</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/fonts.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MinGW-w64" class="md-header__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MinGW-w64
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MinGW-w64" class="md-nav__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    MinGW-w64
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Changelog
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1000-2022-04-04" class="md-nav__link">
+    v10.0.0: 2022-04-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v900-2021-05-22" class="md-nav__link">
+    v9.0.0: 2021-05-22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v800-2020-09-18" class="md-nav__link">
+    v8.0.0: 2020-09-18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v700-2019-11-10" class="md-nav__link">
+    v7.0.0: 2019-11-10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v600-2018-09-17" class="md-nav__link">
+    v6.0.0: 2018-09-17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v504-2018-06-04" class="md-nav__link">
+    v5.0.4: 2018-06-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v503-2017-11-04" class="md-nav__link">
+    v5.0.3: 2017-11-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v502-2017-03-28" class="md-nav__link">
+    v5.0.2: 2017-03-28
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v501-2017-01-06" class="md-nav__link">
+    v5.0.1: 2017-01-06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v500-2016-10-19" class="md-nav__link">
+    v5.0.0: 2016-10-19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v4" class="md-nav__link">
+    v4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v3" class="md-nav__link">
+    v3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    v2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donate/" class="md-nav__link">
+        Donate
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/configure/" class="md-nav__link">
+        Notable Configure Options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v1000-2022-04-04" class="md-nav__link">
+    v10.0.0: 2022-04-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v900-2021-05-22" class="md-nav__link">
+    v9.0.0: 2021-05-22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v800-2020-09-18" class="md-nav__link">
+    v8.0.0: 2020-09-18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v700-2019-11-10" class="md-nav__link">
+    v7.0.0: 2019-11-10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v600-2018-09-17" class="md-nav__link">
+    v6.0.0: 2018-09-17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v504-2018-06-04" class="md-nav__link">
+    v5.0.4: 2018-06-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v503-2017-11-04" class="md-nav__link">
+    v5.0.3: 2017-11-04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v502-2017-03-28" class="md-nav__link">
+    v5.0.2: 2017-03-28
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v501-2017-01-06" class="md-nav__link">
+    v5.0.1: 2017-01-06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v500-2016-10-19" class="md-nav__link">
+    v5.0.0: 2016-10-19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v4" class="md-nav__link">
+    v4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v3" class="md-nav__link">
+    v3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    v2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/changelog.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+<h1 id="changelog">Changelog</h1>
+<h2 id="v1000-2022-04-04">v10.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37635065/">2022-04-04</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>New msvcrt10, 20, 40, 70 and 71 import libraries.</li>
+<li>Drop x86_64 64bit crtdll.dll</li>
+<li>Updated wine imports</li>
+<li>Fix intrin.h compatibility with GCC-11</li>
+<li><code>_(v)scprintf</code> optimization</li>
+<li>optimize <code>__ms_vsnprintf</code> for LTO</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical
+order)</p>
+<p>Biswapriyo Nath, Corinna Vinschen, davjam, Jacek Caban, Jeremy Drake, Jonathan
+Marler, Liu Hao, Mark Harmstone, Martin Storsjö, Matheus Izvekov, Michel Zou,
+Ozkan Sezer, Pali Rohár, Patrick Northon, Ruslan Garipov, Steve Lhomme, Tom
+Ritter</p>
+<h2 id="v900-2021-05-22">v9.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37287751/">2021-05-22</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>UCRT updates by Biswapriyo Nath</li>
+<li>Wine updates by Jacek Caban</li>
+<li>Various new and updated API headers by Biswapriyo Nath and Liu Hao</li>
+<li>Various UCRT and MSVCRT fixes by Martin Storsjö</li>
+<li><code>at_quick_exit</code> implementation by Martin Storsjö</li>
+<li>dism API by Biswapriyo Nath</li>
+<li>idl fixes by Steve Lhomme</li>
+<li>Winpthreads fixes by Liu Hao</li>
+<li>gettimeofday precision increase by Christian Franke</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical order)</p>
+<p>Alex Henrie, Andrew Eikum, Biswapriyo Nath, Christian Franke, Christoph
+Reiter, DAVID MAY, Jacek Caban, Jeremy Drake, Jonathan Yong, Liu Hao, Mark
+Harmstone, Martin Storsjö, Mateusz Mikuła, Nikolay Sivov, Ozkan Sezer, Pierre
+Lamot, Rafał Harabień, Scr3amer, Steve Lhomme</p>
+<h2 id="v800-2020-09-18">v8.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37111166/">2020-09-18</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>New Hyper-V headers and libraries by Biswapriyo Nath</li>
+<li>Many headers updated from Wine by Jacek Caban.</li>
+<li>ARM math improvements by Martin Storsjö</li>
+<li>floating point fixes by Liu Hao</li>
+<li>many <code>*printf</code> compatibility fixes by Liu Hao and Martin Storsjö</li>
+<li>massive Windows App Store API updates by Steve Lhomme</li>
+<li>winstorecompat library updates by Martin Storsjö</li>
+<li><code>USE_MINGW_ANSI_STDIO</code> now automatically enabled in C99 and C11mode when not using UCRT by Pali Rohár</li>
+<li>wdm and ddk updates by Zebediah Figura</li>
+<li>UCRT for Windows Store Apps (-lucrtapp) by Martin Storsjö</li>
+<li>Audioclient and ActivateAudioInterfaceAsync API updates by Liu Hao</li>
+<li>DirectX SDKs are now always installed</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical order)</p>
+<p>Alex Henrie, Biswapriyo Nath, Eric Hassold, Jacek Caban, Jehan Pagès, Kleis Auke
+Wolthuizen, Liu Hao, Martin Mitáš, Martin Storsjö, Nikolay Sivov, Noah Treuhaft,
+Pali Rohár, Ruslan Garipov, Sanketh Menda, sezero, Stephan Ruloff, Stephen Kitt,
+Steve Lhomme, Tom Ritter, xtne6f, Zebediah Figura, 屈佳伟</p>
+<h2 id="v700-2019-11-10">v7.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/36804945/">2019-11-10</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li><code>_FORTIFY_SOURCE</code> support thanks to Christian Franke.</li>
+<li>Lots of math fixes from Martin Storsjö.</li>
+<li>Many headers updated from Wine by Jacek Caban.</li>
+<li>UCRT support by Martin Storsjö.</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical
+order)</p>
+<p>Alexey Pavlov, Antoine Cœur, Biswapriyo Nath, Chris Charabaruk, Christian
+Franke, Hugo Beauzée-Luyssen, Jacek Caban, James Ross-Gowan, Johannes Pfau, Kai
+Tietz, Liu Hao, Marisa-Chan, Martin Storsjö, Marvin Scholz, Mateusz Brzostek,
+Matthew Palermo, Nikolay Sivov, Pierre Lamot, Richard Pospesel, Ruslan Garipov,
+sezero, SquallATF, Steve Lhomme, Tomáš Golembiovský, Tom Ritter, xnor, Zach
+Bacon, Zebediah Figura, Руслан Ижбулатов</p>
+<h2 id="v600-2018-09-17">v6.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/36416777/">2018-09-17</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>C++ <code>__cxa_atexit</code> thanks to Martin Storsjö and Liu Hao</li>
+<li>Massive additions to support UCRT thanks to Martin Storsjö</li>
+<li>Sync COM interface headers with Wine development thanks to Jacek Caban</li>
+<li>WinRT additions thanks to Hugo Beauzée-Luyssen</li>
+<li>ARM32 and ARM64 additions thanks to Martin Storsjö</li>
+<li>CRT library api-ms-win-core additions thanks to Martin Storsjö</li>
+<li>CRT library def file reorganization thanks to Martin Storsjö</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical
+order)</p>
+<p>Alexey Pavlov Alon Bar-Lev André Hentschel Arthur Edelstein Corinna
+Vinschen David Grayson David Wohlferd Ebrahim Byagowi Guy Helmer Hugo
+Beauzée-Luyssen Ihsan Akmal Jacek Caban James Ross-Gowan Jean-Baptiste
+Kempf Jonathan Yong Jon Turney Kai Tietz Liu Hao Martell Malone Martin
+Storsjö Mateusz Matheus Izvekov mati865 Michał Janiszewski Nikolay Sivov
+niXman Petri Hodju Ray Donnelly Ruben Van Boxem Ruslan Garipov Samuel D.
+Leslie sezero Soar Qin Tamar Christina Tamir Duberstein Tim Hutt Tom
+Ritter Yuta Nakai Алексей Павлов Руслан Ижбулатов 宋冬生</p>
+<h2 id="v504-2018-06-04">v5.0.4: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/36333746/">2018-06-04</a></h2>
+<ul>
+<li>Fix gcc-8.1.0 compatibility regarding _xgetbv</li>
+<li><code>%e</code> printf specifier will now produce at least 2 digits for the
+  exponent.</li>
+</ul>
+<h2 id="v503-2017-11-04">v5.0.3: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/36103143/">2017-11-04</a></h2>
+<ul>
+<li>pseudo-reloc will now try to restore page protection settings prior
+  to manipulating it, rather than simply assuming it was read-only
+  with execute.</li>
+<li>winpthreads: Fix undefined <code>__divmoddi4</code> when compiling with newly
+  bootstrapped gcc-7</li>
+<li>Fixed modf family segfault due to eax clobbering.</li>
+</ul>
+<h2 id="v502-2017-03-28">v5.0.2: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/35754067/">2017-03-28</a></h2>
+<ul>
+<li>RegSetKeyValueW now has proper wide arguments.</li>
+<li>Fix some crashes in winpthreads due to misaligned memory access when
+  used with some SSE instructions.</li>
+<li>Fix pdh.h function calls to have proper stdcall decorators.</li>
+</ul>
+<h2 id="v501-2017-01-06">v5.0.1: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/35588585/">2017-01-06</a></h2>
+<ul>
+<li>Don't use feature <code>(__attribute__((gcc_struct)))</code> that isn't supported on
+  clang when compiling on clang thanks to David Wohlferd.</li>
+<li>Various ARM math fixes thanks to Martin Storsjö</li>
+<li>Removed some duplicate uuids defintions, thanks to HugoBeauzée-Luyssen.</li>
+<li>Define <code>IN6_IS_ADDR_</code> macros to conform to Posix Specm thanks toJean-Baptiste
+  Kempf</li>
+<li>dxva.h: Add support for VP8/9 in DxVA2 thanks to Yuta Nakai</li>
+</ul>
+<h2 id="v500-2016-10-19">v5.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/35437019/">2016-10-19</a></h2>
+<ul>
+<li>Fixes to the <code>__mingw_printf</code> family of functions.</li>
+<li>DirectX updates from Wine.</li>
+<li>Various updates to support Windows 7 and 10.</li>
+<li>Various header typo fixes.</li>
+</ul>
+<h2 id="v4">v4</h2>
+<ul>
+<li>32bit ARM thumb software math (Thanks to André Hentschel!).</li>
+<li>New ftw() support for gcc-5.x support.</li>
+<li>Experimental printf changes - Ability to print 128bit integers
+  (%I128*) and Decimal Floats (%H, %D), disabled by default. Build
+  the CRT with <code>--enable-experimental</code> to use.</li>
+<li>Updated OpenGL 4.5 headers.</li>
+<li>Better DirectX 11 support.</li>
+<li>Better Windows 7, 8/8.1 API support.</li>
+</ul>
+<h2 id="v3">v3</h2>
+<ul>
+<li>Required for GCC 4.8.</li>
+<li>Much improved floating point math performance.</li>
+<li>Improved MSVC intrinsics performance.</li>
+<li>Addition of wide variants in C99 printf and scanf.</li>
+<li>Partial C1X secure CRT support.</li>
+<li>Partial MS Secure CRT templates for C++.</li>
+<li>Vastly improved Windows 7 and 8 win32 API support.</li>
+<li>POSIX-style Large File Support.</li>
+<li>Winpthread: new library, pthreads implementation for Windows.</li>
+<li>Winstorecompat: new library for Windows Store compatibility (WIP).</li>
+</ul>
+<h2 id="v2">v2</h2>
+<ul>
+<li>Expanded Windows Vista/7 API support.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>

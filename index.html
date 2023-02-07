@@ -1,0 +1,704 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="GCC for Windows 64 & 32 bits">
+      
+      
+      
+        <link rel="canonical" href="https://www.mingw-w64.org/">
+      
+      
+      
+        <link rel="next" href="changelog/">
+      
+      <link rel="icon" href="logo.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>MinGW-w64</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="stylesheets/fonts.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MinGW-w64" class="md-header__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+      
+  <img src="logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MinGW-w64
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MinGW-w64" class="md-nav__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+      
+  <img src="logo.svg" alt="logo">
+
+    </a>
+    MinGW-w64
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Overview
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#headers-libraries-and-runtime" class="md-nav__link">
+    Headers, Libraries and Runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friend-projects" class="md-nav__link">
+    Friend projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-projects-using-mingw-w64" class="md-nav__link">
+    Some Projects using Mingw-w64
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="donate/" class="md-nav__link">
+        Donate
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/configure/" class="md-nav__link">
+        Notable Configure Options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#headers-libraries-and-runtime" class="md-nav__link">
+    Headers, Libraries and Runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friend-projects" class="md-nav__link">
+    Friend projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-projects-using-mingw-w64" class="md-nav__link">
+    Some Projects using Mingw-w64
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+<header>
+<h1 style="text-align: left">
+    <img src="header-dark.svg#gh-dark-mode-only" style="max-width: min(90%, 400px);">
+    <img src="header.svg#gh-light-mode-only" style="max-width: min(90%, 400px);">
+</h1>
+</header>
+
+<h1 id="_1"></h1>
+<p>Mingw-w64 is an advancement of the original mingw.org project, created to
+support the GCC compiler on Windows systems. It has forked it in 2007 in order
+to provide support for 64 bits and new APIs. It has since then gained widespread
+use and distribution.</p>
+<p>The development and community are very active and welcoming with new
+contributors every month and simple installers.</p>
+<h2 id="headers-libraries-and-runtime">Headers, Libraries and Runtime</h2>
+<ul>
+<li>More than a million lines of headers are provided, not counting generated ones,
+  and regularly expanded to track new Windows APIs.</li>
+<li>Everything needed for linking and running your code on Windows.</li>
+<li>Winpthreads, a pthreads library for C++11 threading support and simple
+  integration with existing project.</li>
+<li>Winstorecompat, a work-in-progress convenience library that eases conformance with the Windows Store.</li>
+<li>Better-conforming and faster math support compared to VisualStudio's.</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<ul>
+<li>gendef: generate Visual Studio .def files from .dll files.</li>
+<li>genidl: generate .idl files from .dll files.</li>
+<li>widl: compile .idl files.</li>
+</ul>
+<h2 id="friend-projects">Friend projects</h2>
+<p>Mingw-w64 interacts a lot with other projects in order to help everyone move
+forward. Contributions have been going to and coming from these projects:</p>
+<table>
+<tr>
+<td style="text-align: center">
+    <a href="http://cygwin.com" class="media" title="http://cygwin.com"><img src="./logos/cygwin-logo.png" title="Cygwin" width="64" height="64" alt="Cygwin" />
+    <br>Cygwin
+    </a>
+</td>
+<td style="text-align: center">
+    <a href="http://reactos.com" class="media" title="http://reactos.com"><img src="./logos/reactos-logo.png" title="ReactOS" width="116" height="64" alt="ReactOS" />
+    <br>
+    ReactOS
+    </a>
+</td>
+<td style="text-align: center">
+    <a href="http://winehq.org" class="media" title="http://winehq.org"><img src="./logos/wine-logo.png" title="Wine" width="40" height="64" alt="Wine" />
+    <br>
+    Wine
+    </a>
+</td>
+<td style="text-align: center">
+    <a href="https://www.msys2.org" class="media" title="https://www.msys2.org"><img src="./logos/msys2-logo.png" title="MSYS2" width="64" height="64" alt="MSYS2" />
+    <br>
+    MSYS2
+    </a>
+</td>
+</tr>
+</table>
+
+<h2 id="some-projects-using-mingw-w64">Some Projects using Mingw-w64</h2>
+<ul>
+<li><a href="http://fedoraproject.org/wiki/MinGW">Fedora cross-compiler</a></li>
+<li><a href="https://npackd.appspot.com">Npackd</a></li>
+<li><a href="http://opensuse.org">OpenSUSE</a></li>
+<li><a href="http://win-builds.org">Win-builds</a></li>
+<li><a href="http://code.google.com/p/barchart-udt/">Barchart-UDT</a></li>
+<li><a href="http://www.blender.org/">Blender</a></li>
+<li><a href="http://www.boost.org/">Boost</a></li>
+<li><a href="http://botan.randombit.net/">Botan</a></li>
+<li><a href="http://www.ceemple.com">Ceemple</a></li>
+<li><a href="http://www.codeblocks.org/">Code::Blocks</a></li>
+<li><a href="http://daetools.sourceforge.net">DAE Tools</a></li>
+<li><a href="http://devkitpro.org/">devkitPro</a></li>
+<li><a href="http://sourceforge.net/projects/dbh/">Disk Based HashTables</a></li>
+<li><a href="http://www.ecere.org/">Ecere SDK</a></li>
+<li><a href="http://www.ekiga.org/">Ekiga</a></li>
+<li><a href="http://emergedesktop.org">Emerge Desktop</a></li>
+<li><a href="http://www.enlightenment.org/">Enlightenment</a></li>
+<li><a href="http://factorcode.org/">Factor</a></li>
+<li><a href="http://ffmpeg.mplayerhq.hu/">FFmpeg</a></li>
+<li><a href="http://www.fltk.org/">FLTK</a></li>
+<li><a href="http://fc-solve.shlomifish.org/">Freecell Solver</a></li>
+<li><a href="http://freeverb3.sourceforge.net/">Freeverb3</a></li>
+<li><a href="http://gcc.gnu.org/">GCC: The GNU Compiler Collection</a></li>
+<li><a href="http://www.gnu.org/software/gdb/">GDB: The GNU Project Debugger</a></li>
+<li><a href="http://gimp-win.sourceforge.net/stable.html">GIMP</a></li>
+<li><a href="http://www.gnu.org/software/binutils/">GNU Binutils</a></li>
+<li><a href="http://www.gnu.org/software/gsasl/">GNU SASL</a></li>
+<li><a href="http://www.gnu.org/software/gnutls/">GnuTLS</a></li>
+<li><a href="http://www.graphicsmagick.org/">GraphicsMagick</a></li>
+<li><a href="http://www.gtk.org/download-windows-64bit.html">GTK+</a></li>
+<li><a href="http://uhexen2.sf.net/">Hexen II: Hammer of Thyrion</a></li>
+<li><a href="http://www.iauxsoft.com/">iAuxSoft</a></li>
+<li><a href="http://www.imagemagick.org/">ImageMagick</a></li>
+<li><a href="http://jpen.sf.net/">JPen</a></li>
+<li><a href="http://kde.org/">KDE Software Collection</a></li>
+<li><a href="http://libav.org/">libav</a></li>
+<li><a href="http://www.libreoffice.org/">LibreOffice</a></li>
+<li><a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a></li>
+<li><a href="http://libvirt.org/">libvirt</a></li>
+<li><a href="http://www.webmproject.org/">libvpx</a></li>
+<li><a href="http://xmlsoft.org/">Libxml2</a></li>
+<li><a href="http://mamedev.org/">MAME (Yes, the arcade emulator!)</a></li>
+<li><a href="http://common-lisp.net/project/mkcl/">ManKai Common Lisp</a></li>
+<li><a href="http://mctrl.org">mCtrl</a></li>
+<li><a href="http://www.mpg123.de/">mpg123</a></li>
+<li><a href="http://www.mpir.org/">MPIR</a></li>
+<li><a href="https://bitbucket.org/Haroogan/microsoft-mpi/downloads">MS MPI (repackaged)</a></li>
+<li><a href="http://www.symscape.com/configure-msmpi-for-mingw-w64">MS MPI</a></li>
+<li><a href="http://www.ocaml.org">OCaml</a></li>
+<li><a href="http://www.symscape.com/openfoam-1-7-x-on-windows-64-mpi">OpenFOAM</a></li>
+<li><a href="http://www.eligis.com/">OpenLisp</a></li>
+<li><a href="http://www.opensc-project.org/">OpenSC</a></li>
+<li><a href="http://www.openssl.org/">OpenSSL</a></li>
+<li><a href="http://www.openturns.org/">OpenTURNS</a></li>
+<li><a href="http://www.perl.org/">Perl (5.12.0 and later)</a></li>
+<li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
+<li><a href="http://sourceware.org/pthreads-win32/">pthreads</a></li>
+<li><a href="http://www.paratools.com/PToolsWIN">PToolsWin</a></li>
+<li><a href="http://qemu.org">QEMU</a></li>
+<li><a href="http://qt-project.org/">Qt</a></li>
+<li><a href="http://quakespasm.sourceforge.net/">QuakeSpasm</a></li>
+<li><a href="http://remood.sf.net/">ReMooD</a></li>
+<li><a href="http://sbcarchiver.cjb.net/">SBC Archiver</a></li>
+<li><a href="http://smartimagedenoiser.com/">Smart Image Denoiser</a></li>
+<li><a href="http://smartmontools.sourceforge.net/">smartmontools</a></li>
+<li><a href="http://strawberryperl.com/">Strawberry Perl (bundles C toolchains)</a></li>
+<li><a href="http://strongswan.org/">strongSwan</a></li>
+<li><a href="http://www.r-project.org/">The R Project for Statistical Computing</a></li>
+<li><a href="http://www.tomahawk-player.org/">Tomahawk Player</a></li>
+<li><a href="http://www.videolan.org/vlc/">VideoLAN VLC</a></li>
+<li><a href="http://www.vsxu.com/">VSXu</a></li>
+<li><a href="http://www.woodem.eu/">Woo</a></li>
+<li><a href="http://www.wxperl.co.uk/building/msw.html">wxPerl PPMs</a></li>
+<li><a href="http://www.wxwidgets.org/">wxWidgets</a></li>
+<li><a href="http://www.yafaray.org/">YafaRay</a></li>
+<li><a href="http://www.zlib.net/">zlib</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
